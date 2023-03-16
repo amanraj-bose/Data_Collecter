@@ -1,0 +1,91 @@
+/*
+    Author <=> Aman Raj
+    Encoding <=> UTF-8
+    File Created <=> 25/02/23
+*/
+
+body{
+    background: #000;
+    color: orangered;
+}
+
+section{
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    top: 6rem;
+    position: relative;
+}
+
+.login-box{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    padding: 32px;
+    height: 70vh;
+    width: 65vh;
+}
+.info{
+    text-align: center;
+    top: 0rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_form{
+    color: orangered;
+    background-color: rgba(200, 6, 54, 0.233)!important;
+    height: 30px;
+    width: 20rem;
+    border-radius: 10px;
+    border: 2px solid orangered;
+    display: grid;
+    font-size: 20px;
+}
+
+.input_form::placeholder{
+    text-align: center;
+    font-size: 15px;
+}
+
+.submit-data-permission{
+    height: 5vh;
+    width: 80px;
+    border-radius: 10px;
+    border: 3px solid orangered;
+    cursor: pointer;
+    background: transparent;
+    color: orangered;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .40s ease-in-out;
+    margin: auto;
+}
+.submit-data-permission:hover{
+    background: orangered;
+    color: #fff;
+    font: bolder;
+}
+
+input:-internal-autofill-selected {
+    background-color: rgba(200, 6, 54, 0.233)!important;
+}
+
+@media (max-width:800px) {
+    section{
+        top: 0rem;
+    }
+    .login-box{
+        height: 75vh;
+        width: 44vh;
+        display: grid;
+    }
+    .info{
+        right: 1rem;
+        position: relative;
+    }
+}

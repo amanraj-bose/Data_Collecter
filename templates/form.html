@@ -1,0 +1,130 @@
+<!--
+@Author  => Aman Raj
+@Encoding => UTF-8
+@FileCreated => 18/02/2023
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='utils.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='hamburger.menu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='code.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='media.query.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.anime.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.stylesheet.css' ) }}">
+    <link rel="shortcut icon" href="{{ url_for('static',  filename='assets/favicon.ico') }}" type="image/png">
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo flex">
+            <h2>Raj</h2>
+            <nav class="navver">
+                <ul class="navbar">
+                    <li type="none" class="list_nav"><a href="{{ home }}" class="links">Home</a></li>
+                    <li type="none" class="list_nav"><a href="{{ collector }}" class="links">Collecter</a></li>
+                    <li type="none" class="list_nav"><a href="{{ data }}" class="links">Form</a></li>
+                    <li type="none" class="list_nav"><a href="{{ about }}" class="links">About</a></li>
+                </ul>
+            </nav>
+            <!-- HamBurger Menu Configuration -->
+
+            <div class="hamburger-nav">
+
+                <!-- HamBurger Button Start -->
+                <button class="hambar" id="ham-bar-1" onclick="hamclick()">
+                    <img src="../static/assets/hamburger-1.svg" alt="hamburger menu" class="ham-image" style="width: 30px" id="btn-hm-1">
+                </button>
+                <!-- HamBurger Button End -->
+
+                <!-- Cross Button -->
+                <button class="hambar-2" id="ham-bar-2" onclick="crossClick()">
+                    <img src="../static/assets/cross.png" alt="hamburger menu" class="ham-image-2" style="width: 30px" id="btn-hm-2">
+                </button>
+
+                <!-- Cross Button End -->
+                
+            </div>
+            
+            <!-- Hamburger Menu Configuration End -->
+        </div>
+    </div>
+
+    <!-- Drop Down Mobile Main Menu End -->
+
+    <div class="nav-down-nav" id="nav-down-body-id-1">
+        <ul class="nav-down-ul">
+            <li class="nav-menu-item"><a href="{{ home }}" class="link-down">Home</a></li>
+            <li class="nav-menu-item"><a href="{{ collector }}" class="link-down">Collector</a></li>
+            <li class="nav-menu-item"><a href="{{ data }}" class="link-down">Form</a></li>
+            <li class="nav-menu-item"><a href="{{ about }}" class="link-down">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Drop Down Mobile Main Menu End -->
+
+    <section class="main_download_content">
+        <div class="form_content">
+            <div class="left_side_content">
+                <div class="content_index">
+                    <h3 class="underline-header">Content</h3>
+                    <ul class="content-list">
+                        <a href="#errors" class="head-content-links-2">
+                            <li>&bullet; Errors</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="documentation">
+                    <h2 class="header-typo-error">
+                        <a href="#errors" class="head-content-links" aria-hidden="true">#</a>
+                        Errors
+                    </h2>
+                    <div class="error-doc">
+                    <p class="error"><b style="font-weight: 300; color:red;">Length Error:</b>When Your Sentence Length is less then 5 words.</p>
+                    <p class="error"><b style="font-weight: 300; color:red;">Sentiment Error:</b>When Your Sentence Sentiment isn't positive or neutral.</p>
+                    <p class="error"><b style="font-weight: 300; color:red;">Language Error:</b>If your input text is not english.</p>
+                    <p class="error"><b style="font-weight: 300; color:red;">Spam Error:</b>If your input text is spam type.</p>
+                </div></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer_header">
+                <h1>Raj</h1>
+                <p>Copyright &copy; 2023</p>
+            </div>
+            <nav>
+                <ol>
+                    <li class="home_li_1"><a class="footer_links" href="{{ home }}"
+                            style="text-decoration: none;">Home</a></li>
+                    <li class="home_li_2"><a class="footer_links" href="{{ collector }}"
+                            style="text-decoration: none;">Collecter</a>
+                    </li>
+                    <li class="home_li_3"><a class="footer_links" href="{{ data }}"
+                            style="text-decoration: none;">Form</a></li>
+                    <li class="home_li_4"><a class="footer_links" href="{{ about }}" style="text-decoration: none;">About</a></li>
+                </ol>
+            </nav>
+            <div class="social">
+                <h3>Contact With</h3>
+                <div class="imgs_social">
+                    <a href="{{ github }}" class="social_links">
+                        <img src="../static/assets/github.png" alt="" class="images_footer github">
+                    </a>
+                    <a href="{{ twitter }}" class="social_links">
+                        <img src="../static/assets/twitter.png" alt="" class="images_footer twitter">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="{{ url_for('static', filename='logic/hamburger.js' ) }}"></script>
+</html>

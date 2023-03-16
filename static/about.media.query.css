@@ -1,0 +1,36 @@
+@media (max-width: 500px) {
+    .information-box{
+        display: grid;
+        margin: auto;
+    }
+    .team-member-1{
+        width: fit-content;
+        height: fit-content;
+        padding: 1.5rem;
+    }
+    .type-writer{
+        margin-bottom: 2rem;
+    }
+    .card-effects-for-author{
+        transition: 1s ease-in-out;
+        overflow: hidden;
+        cursor: default;
+        height: fit-content;
+        width: 40vh;
+        border-radius: 10px;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0px 0px 10px black;
+        margin: auto;
+    }
+    .about-info{
+        line-break: normal;
+    }
+    .man-page{
+        overflow-x: hidden;
+    }
+    .moveit{
+        margin-bottom: 2rem;
+    }
+}

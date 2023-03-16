@@ -1,0 +1,218 @@
+/**
+ * @author Aman Raj
+ * @since 15/02/2023
+ * @encoding utf-8
+*/
+
+
+.Input{
+    background-color: #330033;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.footer{
+    top: 0px;
+}
+
+.norm{
+    align-items: normal;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 16rem;
+}
+
+.patch1{
+    top: 60px;
+    right: 20px;
+    color: #fff;
+}
+
+.input_label{
+    left: 0px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    position: relative;
+    margin: auto;
+    bottom: 60px;
+    align-items: center;
+}
+
+#input{
+    height: 10vh;
+    color: #fff;
+    width: 50vh;
+    border-radius: 10px;
+    background-color: #330033;
+    text-align: left;
+    border: 5px solid orangered;
+    font-size: 25px;
+}
+
+.submit{
+    height: 5vh;
+    width: 80px;
+    border-radius: 10px;
+    border: 3px solid orangered;
+    cursor: pointer;
+    background: transparent;
+    color: orangered;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .40s ease-in-out;
+}
+
+.underline{
+    left: 120px;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.info{
+    position: relative;
+    top: 140px;
+    right: 65px;
+    line-height: 1.3;
+}
+
+.submit:hover{
+    background: orangered;
+    color: #fff;
+    font: bolder;
+}
+
+#input::after{
+    border: 3px solid orangered;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+#input::placeholder{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 4px;
+    top: 20px;
+    font-size: 30px;
+}
+
+.agenda{
+    height: 8vh;
+    width: 100%;
+    background-color: orangered;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.normal_header{
+    color: #fff;
+}
+
+.linear{
+    background-color: rgb(200 40 0 / 70%);;
+    border-radius: 7px;
+    text-align: center;
+    padding: 3px;
+}
+
+.label{
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    left: 177px;
+    position: relative;
+}
+
+.identity{
+    color: green;
+    font-size: 25px;
+}
+
+.size{
+    height: 25px;
+    gap: 2px;
+    font-size: 20px;
+}
+
+.submission{
+    display: flex;
+    height: 12vh;
+    font-size: 23px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 6rem;
+    right: 0.5rem;
+    width: 30rem;
+    border-left: thick double orangered; /*rgb(13, 176, 252);*/
+}
+
+.extra{
+    background-color: rgb(100 20 10 / 50%);
+    border-radius: 2px;
+}
+
+#submission_text{
+    color: #fff;
+}
+
+@media (max-width: 400px){
+    .patch1{
+        left: 0px;
+    }
+    .input_label{
+        display: grid;
+        top: 5px;
+    }
+    form{
+        display: grid;
+        top: 5px;
+    }
+    .submit{
+        margin: auto;
+    }
+
+    #input{
+        font-size: 15px;
+    }
+    .linear{
+        padding: 0px;
+        display: flex;
+        text-align: center;
+        top: 5px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .agenda{
+        height: 12vh;
+    }
+    #input::placeholder{
+        margin: auto;
+        top: 3px;
+    }
+    .label{
+        display: none;
+    }
+    .Input{
+        height: 100vh;
+    }
+    .submission{
+        margin: auto;
+        width: 20rem;
+    }
+}
+

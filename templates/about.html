@@ -1,0 +1,183 @@
+<!--
+@Author  => Aman Raj
+@Encoding => UTF-8
+@FileCreated => 22/02/2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='utils.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='hamburger.menu.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='code.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='media.query.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.anime.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.stylesheet.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='typewriter.effects.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.media.query.css') }}">
+
+    <link rel="shortcut icon" href="{{ url_for('static',  filename='assets/favicon.ico') }}" type="image/png" />
+
+    <title>About</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo flex">
+            <h2>Raj</h2>
+            <nav class="navver">
+                <ul class="navbar">
+                    <li type="none" class="list_nav">
+                        <a href="{{ home }}" class="links">Home</a>
+                    </li>
+                    <li type="none" class="list_nav">
+                        <a href="{{ collector }}" class="links">Collecter</a>
+                    </li>
+                    <li type="none" class="list_nav">
+                        <a href="{{ data }}" class="links">Form</a>
+                    </li>
+                    <li type="none" class="list_nav">
+                        <a href="{{ about }}" class="links">About</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- HamBurger Menu Configuration -->
+
+            <div class="hamburger-nav">
+
+                <!-- HamBurger Button Start -->
+                <button class="hambar" id="ham-bar-1" onclick="hamclick()">
+                    <img src="../static/assets/hamburger-1.svg" alt="hamburger menu" class="ham-image" style="width: 30px" id="btn-hm-1">
+                </button>
+                <!-- HamBurger Button End -->
+
+                <!-- Cross Button -->
+                <button class="hambar-2" id="ham-bar-2" onclick="crossClick()">
+                    <img src="../static/assets/cross.png" alt="hamburger menu" class="ham-image-2" style="width: 30px" id="btn-hm-2">
+                </button>
+
+                <!-- Cross Button End -->
+                
+            </div>
+            
+            <!-- Hamburger Menu Configuration End -->
+        </div>
+    </div>
+
+    <!-- Drop Down Mobile Main Menu End -->
+
+    <div class="nav-down-nav" id="nav-down-body-id-1">
+        <ul class="nav-down-ul">
+            <li class="nav-menu-item"><a href="{{ home }}" class="link-down">Home</a></li>
+            <li class="nav-menu-item"><a href="{{ collector }}" class="link-down">Collector</a></li>
+            <li class="nav-menu-item"><a href="{{ data }}" class="link-down">Form</a></li>
+            <li class="nav-menu-item"><a href="{{ about }}" class="link-down">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Drop Down Mobile Main Menu End -->
+
+
+    <div class="man-page">
+        <div class="author-divisor">
+            <img src="../static/assets/author.jpg" alt="Author Logo" class="about-author-image">
+        </div>
+        <h1 class="man-page-name">About Us</h1>
+        <p class="about-info">My name is <u>Aman Raj</u>. And This Website Belongs to Out Project ProtoCol. So, this website made up for only Data Collection...</p>
+
+        <div class="information-box move-card">
+
+            <div class="card-effects bg-effect text-based">
+              <h3 class="color-less">Contact Us</h3>
+                <hr class="normal-hr-tag">
+                <p>Hi, If You Contact with us then click these platform and follow me on 
+                <br>
+                <br>
+                <br><a href="{{ github_author_1 }}" class="special_underline links">&#8226; Github</a>
+                <br><a href="{{ twitter_author_1 }}" class="special_underline links">&#8226; Twitter</a>
+                <br><a href="{{ kaggle_author_1 }}" class="special_underline links">&#8226; Kaggle</a>
+                </p>
+            </div>
+      
+            <div class="card-effects bg-effect text-based">
+                <h3 class="color-less">About Project</h3>
+                <hr class="normal-hr-tag">
+                <p> This Website Data used for Building Text Based Deep Learning Models & Also, This Website Only Collect Text Based Data. </p>
+            </div>
+
+        </div>
+        <div class="our-team">
+            <h1 class="heading man-page-name">Our Contributor's</h1>
+            <hr class="line normal-hr-tag">
+            <!-- Team Name Start -->
+            <div class="team-member-1">
+                <div class="moveit author-divisor">
+                    <img src="../static/assets/author.jpg" alt="" class="about-author-image">
+                </div>
+                <div class="type-writer">
+                    <h1 class="typewriter-header" aria-label="Hi! I'm a Developer">
+                        Hi! I'm a&nbsp;<span class="typewriter thick"></span>
+                    </h1>
+                </div>
+                <div class="card-effects-for-author">
+                    <p class="name-typo"><b class="name-author">&star; Aman Raj &star;</b></p>
+                    <p class="typo-2 name-typo">Contact With &RightArrowLeftArrow;<b ><a href="{{ github_author_1 }}" class="social_links">
+                        <img src="../static/assets/github.png" alt="" class="author-contacts" />
+                    </a>
+                    <a href="{{ twitter_author_1 }}" class="social_links">
+                        <img src="../static/assets/twitter.png" alt="" class="author-contacts twi" />
+                    </a>
+                </b></p>
+                    <br>
+                    <br>
+                    <p class="descript name-author">Hey, Everyone <br> I am Author Of this Website and I'm explain briefly about this Website on the Home Page. But Basic of this website is Collecting Data For Building Up Deep Learning Model.</p>
+                </div>
+
+            </div>
+            </div>
+            <!-- Team Name End -->
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer_header">
+                <h1>Raj</h1>
+                <p>Copyright &copy; 2023</p>
+            </div>
+            <nav>
+                <ol>
+                    <li class="home_li_1">
+                        <a class="footer_links" href="{{ home }}" style="text-decoration: none">Home</a>
+                    </li>
+                    <li class="home_li_2">
+                        <a class="footer_links" href="{{ collector }}" style="text-decoration: none">Collecter</a>
+                    </li>
+                    <li class="home_li_3">
+                        <a class="footer_links" href="{{ data }}" style="text-decoration: none">Form</a>
+                    </li>
+                    <li class="home_li_4">
+                        <a class="footer_links" href="{{ about }}" style="text-decoration: none">About</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="social">
+                <h3>Contact With</h3>
+                <div class="imgs_social">
+                    <a href="{{ github }}" class="social_links">
+                        <img src="../static/assets/github.png" alt="" class="images_footer github" />
+                    </a>
+                    <a href="{{ twitter }}" class="social_links">
+                        <img src="../static/assets/twitter.png" alt="" class="images_footer twitter" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="{{ url_for('static', filename='logic/hamburger.js' ) }}"></script>
+</html>

@@ -1,0 +1,314 @@
+/**
+ * @author Aman Raj
+ * @since 18/02/2023
+ * @encoding utf-8
+*/
+
+:root{
+    --font-color-about: #fff;
+    --primary-font-color-about: #ff4500;
+    --secondary-background-about: #000;
+    --primary-background-about: rgb(255, 140, 0);
+    --box-shadow-outline-color: rgba(255, 165, 0, 0.6);
+    --outline-hover-color: rgb(255, 196, 0);
+
+    --image-for-bg: './assets/hologram_scheme_scifi_139294_3840x2400.jpg';
+}
+
+.man-page{
+    background-image: url('./assets/hologram_scheme_scifi_139294_3840x2400.jpg');
+    background-size: cover;
+    width: 100%;
+    /* height: 130vh; */
+    padding-bottom: 10rem;
+    text-align: center;
+    padding-top: 3rem;
+    /* Pseudo Code Injected */
+    display: grid;
+    justify-content: center;
+    /* align-items: center;*/
+    text-align: center;
+    /* Pseudo Code Ended */
+}
+.heading{
+    line-height: 0;
+}
+
+
+.type-writer{
+    margin: auto;
+    text-align: center;
+}
+
+.line{
+    position: relative;
+    /* bottom: 2rem; */
+}
+
+.move-card{
+	position: relative;
+    top: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+	/* bottom: 10rem; */
+}
+
+.information-box{
+	display: flex;
+	gap: 5rem;
+}
+
+.normal-hr-tag{
+	width: 10rem;
+	color: var(--font-color-about);
+	background-color: var(--font-color-about);
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.color-less{
+    color: var(--font-color-about);
+    line-height: 1.3;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.text-based{
+    text-align: center;
+    justify-content: center;
+}
+
+
+.man-page-name{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 2;
+}
+
+.main-section{
+    top: 5rem;
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sub-main-section{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.images-logo-author{
+    display: grid;
+    justify-content: center;
+}
+
+.author-images{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1e+4px;
+    border: 5px solid orangered;
+    transition: 1s ease-in-out;
+    margin: auto;
+    cursor: pointer;
+}
+
+.author-images:hover{
+    scale: 1.1;
+    box-shadow: 60px -16px orangered;
+}
+
+.animated-intro{
+    height: 5vh;
+    width: 100%;
+}
+
+.footer{
+    top: 5rem;
+}
+
+.norm{
+    margin-bottom: 2rem;
+}
+
+.author-information{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.overview{
+    font-size: xx-large;
+}
+
+.card-effects-for-author{
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    cursor: default;
+    height: 30vh;
+    width: 40vh;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 0px 10px black;
+    /* background: rgba(255, 255, 255, 0.1); */
+    margin: auto;
+}
+
+.author-card{
+    color: #fff;
+    background-color: var(--primary-background-about);
+    box-shadow: 0px 8px 0px var(--box-shadow-outline-color);
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    cursor: default;
+    height: 30vh;
+    width: 40vh;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.author-card:hover{
+    box-shadow: 0px 0px 25px var(--outline-hover-color);
+    transform: translateY(20px);
+}
+
+.card-effects{
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    cursor: default;
+    height: 30vh;
+    width: 40vh;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.card-effects:hover{
+    transform: translateY(20px);
+}
+
+.bg-effect{
+    box-shadow: 0px 0px 10px black;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bg-effect:hover{
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.about-info{
+    position: relative;
+    /* bottom: 6rem; */
+    line-height: 1;
+    line-break: anywhere;
+}
+
+.about-author-image{
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    width: 150px;
+    height: 150px;
+    border-radius: 1e+4px;
+}
+
+.author-divisor{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.team-member-1{
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    width: 30rem;
+    height: 60vh;
+    border-radius: 10px;
+    margin: auto;
+    display: grid;
+}
+
+.name-typo{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    color: var(--font-color-about);
+    gap: 1rem;
+    position: relative;
+    align-items: center;
+    top: 10px;
+    font: bold italic;
+    font-weight: 400;
+}
+
+.name-typo .name-author{
+    border-bottom: 2px solid #fff;
+    font-family: cursive;
+    font-size: larger;
+}
+
+.descript{
+    font-size: large;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+.author-contacts{
+    width: 20px;
+    height: 20px;
+    border-radius: 1e+4px;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.typo-2{
+    top: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.twi{
+    background-color: #00a2ff;
+    border: 1px solid #00a2ff;
+}
+
+.moveit{
+    position: relative;
+    top: 15px;
+}
+
+.footer{
+    top: 0rem;
+}
+
+
+.moveit{
+    margin-bottom: 0rem;
+}
+
+.our-team{
+    margin-top: 5rem;
+}
+
+@media (max-width:500px) {
+    .master-card{
+        width: 95%;
+    }
+}
+

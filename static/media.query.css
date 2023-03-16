@@ -1,0 +1,201 @@
+/**
+ * @author Aman Raj
+ * @since 10/02/2023
+ * @encoding utf-8
+*/
+
+@media (max-width: 1250px) {
+    .code{
+        display: none;
+    }
+    .main{
+        height: 70vh;
+        top: 110px;
+        position: relative;
+    }
+    .cr1{
+        top: 8rem;
+        position: relative;
+    }
+    .cr2{
+        top: 9rem;
+        position: relative;
+    }
+}
+
+@media (max-width: 1000px) {
+    body{
+        overflow-x: hidden;
+    }
+}
+
+
+@media (max-width: 450px){
+    .navbar{
+        display: none;
+    }
+
+    .case{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 418px;
+    }
+    .short_note{
+        left: 30px;
+        word-wrap: break-word;
+    }
+    .short_note .info{
+        position: relative;
+        right: 10px;
+    }
+    .patch_boxes{
+        display: block;
+    }
+    .style_patch_1{
+        padding: 10px;
+        position: relative;
+        top: 150px;
+        display: block;
+        margin: auto;
+        right: 50px;
+    }
+    .st{
+        top: 0px;
+        right: 8px;
+    }
+    .main{
+        text-align: center;
+        overflow: hidden;
+        /* height: 70vh; */
+    }
+    .cr1{
+        overflow: hidden;
+        top: 16rem;
+        width: 90%;
+    }
+    .cr2{
+        display: none;
+    }
+    .footer{
+        background-color: rgba(53, 20, 10, 0.4);
+        height: 10vh;
+        width: 100%;
+        padding: 100px;
+        top: 1116px;
+        margin: auto;
+        position: relative;
+        gap: 22px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .footer nav{
+        bottom: 30px;
+        position: relative;
+    }
+    .footer_header{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: grid;
+        margin: 0 auto;
+        align-items: center;
+        position: relative;
+        bottom: 30px;
+    }
+    .social{
+        position: relative;
+        bottom: 30px;
+        overflow: visible;
+    }
+    .main{
+        height: 70vh;
+        top: 205px;
+    }
+
+}
+
+@media (max-width: 400px){
+    .navbar{
+        display: none;
+    }
+    .case{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 418px;
+    }
+    .short_note{
+        left: 30px;
+        word-wrap: break-word;
+    }
+    .short_note .info{
+        position: relative;
+        right: 10px;
+    }
+    .patch_boxes{
+        display: block;
+    }
+    .style_patch_1{
+        padding: 10px;
+        position: relative;
+        top: 150px;
+        display: block;
+        margin: auto;
+        right: 50px;
+    }
+    .st{
+        top: 0px;
+        right: 8px;
+    }
+    .main{
+        text-align: center;
+        overflow: hidden;
+    }
+    .cr1{
+        overflow: hidden;
+        top: 16rem;
+        width: 90%;
+    }
+    .cr2{
+        display: none;
+    }
+    .footer{
+        background-color: rgba(53, 20, 10, 0.4);
+        height: 10vh;
+        width: 100%;
+        padding: 100px;
+        top: 1116px;
+        margin: auto;
+        position: relative;
+        gap: 22px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .footer nav{
+        bottom: 30px;
+        position: relative;
+    }
+    .footer_header{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: grid;
+        margin: 0 auto;
+        align-items: center;
+        position: relative;
+        bottom: 30px;
+    }
+    .social{
+        position: relative;
+        bottom: 30px;
+        overflow: visible;
+    }
+    .main{
+        height: 100vh;
+        top: 233px;
+        /*word-break: break-word;*/
+        word-break: break-word
+    }
+
+}

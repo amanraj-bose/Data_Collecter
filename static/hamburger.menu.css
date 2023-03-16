@@ -1,0 +1,97 @@
+/**
+ * @author Aman Raj
+ * @since 25/02/2023
+ * @encoding utf-8
+*/
+
+@media (max-width: 600px) {
+    .hamburger-nav{
+        display: block;
+    };
+    .ham-image{
+        width: 30px;
+    }
+    .hambar{
+        background: transparent;
+        border: none;
+        top: 1rem;
+        position: relative;
+    }
+
+    .xbar{
+        margin: auto;
+        font-size: 30px;
+        color: #fff;
+        background: #000;
+        text-decoration: none;
+        gap: 30px;
+        position: relative;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    .xbar:hover{
+        background: orangered;
+        color: #000;
+    }
+
+    .hambar-2{
+        display: none;
+        background: transparent;
+        border: none;
+        top: 1rem;
+        position: relative;
+    }
+
+    .nav-down-nav{
+        display: none;
+        height: 50vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 20px;
+        transition: 1s ease-in-out;
+        background: rgb(255 69 0 / 10%);
+
+        line-height: 3;
+    }
+
+    .nav-menu-item{
+        color: orange;
+    }
+
+    .nav-menu-item:hover{
+        background: rgb(255 69 0/70%);
+        width: 60vh;
+        opacity: 1;
+        color: #fff;
+        filter: blur(0px);
+    }
+
+    .link-down{
+        opacity: 1;
+        color: #fff;
+        filter: blur(0px);
+    }
+
+    ul:hover li a{
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    .link-down{
+        color: #fff;
+    }
+
+    /* Configuration For notice */
+    .flash-it {
+        height: 5vh;
+        font-size: 15px;
+        display: none;
+    }
+
+}
+

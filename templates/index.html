@@ -1,0 +1,356 @@
+<!--
+@Author  => Aman Raj
+@Encoding => UTF-8
+@FileCreated => 05/02/2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='utils.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='code.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='media.query.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='hamburger.menu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='notice.css') }}">
+    
+
+    <link rel="shortcut icon" href="{{ url_for('static',  filename='assets/favicon.ico') }}" type="image/png">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo flex">
+            <h2>Raj</h2>
+            <nav class="navver">
+                <ul class="navbar">
+                    <li type="none" class="list_nav"><a href="{{ home }}" class="links">Home</a></li>
+                    <li type="none" class="list_nav"><a href="{{ collector }}" class="links">Collecter</a></li>
+                    <li type="none" class="list_nav"><a href="{{ data }}" class="links">Form</a></li>
+                    <li type="none" class="list_nav"><a href="{{ about }}" class="links">About</a></li>
+                </ul>
+            </nav>
+            
+            <!-- HamBurger Menu Configuration -->
+
+            <div class="hamburger-nav">
+
+                <!-- HamBurger Button Start -->
+                <button class="hambar" id="ham-bar-1" onclick="hamclick()">
+                    <img src="../static/assets/hamburger-1.svg" alt="hamburger menu" class="ham-image" style="width: 30px" id="btn-hm-1">
+                </button>
+                <!-- HamBurger Button End -->
+
+                <!-- Cross Button -->
+                <button class="hambar-2" id="ham-bar-2" onclick="crossClick()">
+                    <img src="../static/assets/cross.png" alt="hamburger menu" class="ham-image-2" style="width: 30px" id="btn-hm-2">
+                </button>
+
+                <!-- Cross Button End -->
+                
+            </div>
+            
+            <!-- Hamburger Menu Configuration End -->
+
+        </div>
+    </div>
+
+    <!-- Drop Down Mobile Main Menu End -->
+
+    <div class="nav-down-nav" id="nav-down-body-id-1">
+        <ul class="nav-down-ul">
+            <li class="nav-menu-item"><a href="{{ home }}" class="link-down">Home</a></li>
+            <li class="nav-menu-item"><a href="{{ collector }}" class="link-down">Collector</a></li>
+            <li class="nav-menu-item"><a href="{{ data }}" class="link-down">Form</a></li>
+            <li class="nav-menu-item"><a href="{{ about }}" class="link-down">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Drop Down Mobile Main Menu End -->
+
+    <div id="flash-about-msg" class="flash-it">
+        <p class="notice linear">
+            Notice &RightArrow; This Code is not working for sometime.
+        </p>
+        <button title="clear" onclick="comming()" class="clear_button">&Cross;</button> 
+    </div>
+
+    <section class="case">
+        <div class="short_note">
+            <h1>Home</h1>
+            <p class="info">
+                It is a Simple Tool For Collecting Data, and also publish data for public use.
+                <br>
+                But it's main motive is collect data from user and store database for <b>ML</b> Engineer.
+                <br>
+                Some Project using the data are given in project Section go to `Project` Section,
+                <br>
+                an see our projects.if you are python programmer then see our documentation,
+                <br>
+                for using our <a href="{{ api }}" class="highlighter">Api</a>.
+            </p>
+        </div>
+        <div class="showcase home">
+            <div class="card code">
+                <div class="code_header">
+
+                    <a class="head" href="{{ github }}"><img src="../static/assets/github.png" alt="" class="ico"></a>
+                    <i class="name">main.py</i>
+                </div>
+                <pre class="loader">
+ <strong class="import">import</strong> <a class="module" href="{{ module }}">{{ module_name }}</a> <i class="comment"> #For Downloading Data FromDatabase</i>
+ <strong class="import">import</strong> <a href="{{ os }}" class="module">os</a> <i class="comment">#For Working with Operating system</i>
+<br>
+ <i class="normal">downloader &equals; {{ module_name }}<i class="call">.download<i class="brackets">(</i><i class="str">'advice.zip'<i class="normal">,</i>
+                    <i class="param">extract</i><i class="param_">&equals;</i><b class="bool">True</b><i class="normal">,</i>
+                    <i class="param">directory<i class="param_">&equals;</i><i class="str">'data/'</i></i></i><i class="brackets">)</i></i></i>
+<br>
+<br>
+ <i class="all">print<i class="brackets">(<i class="str">'Downloading Completes.....'</i>)</i></i></pre>
+            </div>
+        </div>
+        </pre>
+    </section>
+    <section class="patch_notes">
+        <section class="dynamic_info">
+            <div class="round_button">
+                <p class="sr">1</p>
+            </div>
+            <div class="head_2">
+                <p class="head_info">
+                    What's New
+                </p>
+                <h1 class="header">
+                    Patch Notes
+                </h1>
+                <hr class="border-bottom">
+                <p class="brief_description">
+                    <q>
+                        It is a ClipBoard for showing you <b class="underline">What's new</b> in this Project.
+                    </q>
+                </p>
+            </div>
+            <div class="patch_boxes">
+                <div class="style_patch_1">
+                    <div class="patch1 shadow">
+                        <div class="download_patch_box">
+                            <h2 class="norm">
+                                Download
+                                <svg fill="#000" class="icon" height="40px" width="40px" version="1.1" id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 472.615 472.615" xml:space="preserve" stroke="#000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="1.5"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M236.308,0C105.799,0,0,105.799,0,236.308s105.799,236.308,236.308,236.308c130.51,0,236.308-105.799,236.308-236.308 S366.817,0,236.308,0z M236.308,389.332L111.626,264.649h66.125V102.976h117.115v161.673h66.125L236.308,389.332z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </h2>
+                            <div class="text">
+                                <p class="info">Go to <b class="underline">Data Tab</b> And download the data. <br> if
+                                    you
+                                    are download from other sources then <br> data is present in <a
+                                        class="special_underline links" href="{{ kaggle }}">Kaggle</a>&comma; <a
+                                        href="{{ Hugging_Face }}" class="special_underline links">Hugging Face</a> .</p>
+                            </div>
+                            <div class="task_frame">
+                                <div class="task_logo">
+                                    <svg viewBox="0 0 24 24" class="svg_taskbar" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="orangered">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="1.5"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 3C12.5523 3 13 3.44772 13 4V12.5858L15.2929 10.2929C15.6834 9.90237 16.3166 9.90237 16.7071 10.2929C17.0976 10.6834 17.0976 11.3166 16.7071 11.7071L12.7071 15.7071C12.5196 15.8946 12.2652 16 12 16C11.7348 16 11.4804 15.8946 11.2929 15.7071L7.2929 11.7071C6.90238 11.3166 6.90238 10.6834 7.2929 10.2929C7.68342 9.90237 8.31659 9.90237 8.70711 10.2929L11 12.5858V4C11 3.44772 11.4477 3 12 3ZM4.00001 14C4.55229 14 5.00001 14.4477 5.00001 15C5.00001 15.9772 5.00485 16.3198 5.05765 16.5853C5.29437 17.7753 6.22466 18.7056 7.41474 18.9424C7.68018 18.9952 8.02276 19 9.00001 19H15C15.9772 19 16.3198 18.9952 16.5853 18.9424C17.7753 18.7056 18.7056 17.7753 18.9424 16.5853C18.9952 16.3198 19 15.9772 19 15C19 14.4477 19.4477 14 20 14C20.5523 14 21 14.4477 21 15C21 15.0392 21 15.0777 21 15.1157C21.0002 15.9334 21.0004 16.4906 20.9039 16.9755C20.5094 18.9589 18.9589 20.5094 16.9755 20.9039C16.4907 21.0004 15.9334 21.0002 15.1158 21C15.0778 21 15.0392 21 15 21H9.00001C8.96084 21 8.92225 21 8.88423 21C8.06664 21.0002 7.50935 21.0004 7.02456 20.9039C5.0411 20.5094 3.49061 18.9589 3.09608 16.9755C2.99965 16.4906 2.99978 15.9334 2.99999 15.1158C3 15.0777 3.00001 15.0392 3.00001 15C3.00001 14.4477 3.44772 14 4.00001 14Z"
+                                                fill="#0F1729"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Patch Note 2 -->
+                <div class="style_patch_1">
+                    <div class="patch1 shadow">
+                        <div class="note">
+                            <h2 class="norm">
+                                Notes
+                                <svg viewBox="0 0 24 24" class="icon" fill="#000" xmlns="http://www.w3.org/2000/svg"
+                                    stroke="orangered">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="1.5"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M20 8.25V18C20 21 18.21 22 16 22H8C5.79 22 4 21 4 18V8.25C4 5 5.79 4.25 8 4.25C8 4.87 8.24997 5.43 8.65997 5.84C9.06997 6.25 9.63 6.5 10.25 6.5H13.75C14.99 6.5 16 5.49 16 4.25C18.21 4.25 20 5 20 8.25Z"
+                                            stroke="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <path
+                                            d="M16 4.25C16 5.49 14.99 6.5 13.75 6.5H10.25C9.63 6.5 9.06997 6.25 8.65997 5.84C8.24997 5.43 8 4.87 8 4.25C8 3.01 9.01 2 10.25 2H13.75C14.37 2 14.93 2.25 15.34 2.66C15.75 3.07 16 3.63 16 4.25Z"
+                                            stroke="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <path opacity="0.4" d="M8 13H12" stroke="" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path opacity="0.4" d="M8 17H16" stroke="" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </h2>
+                            <div class="text">
+                                <p class="info">
+                                    Every Website Update Coming soon... Main Update on <b
+                                        class="underline">Collecter</b>.
+                                </p>
+                            </div>
+                            <div class="task_frame">
+                                <div class="task_logo">
+                                    <svg viewBox="0 0 24 24" class="svg_taskbar" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="orangered">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M8 2V5" stroke="" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16 2V5" stroke="" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path opacity="0.4" d="M7 13H15" stroke="" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path opacity="0.4" d="M7 17H12" stroke="" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path
+                                                d="M16 3.5C19.33 3.68 21 4.95 21 9.65V15.83C21 19.95 20 22.01 15 22.01H9C4 22.01 3 19.95 3 15.83V9.65C3 4.95 4.67 3.69 8 3.5H16Z"
+                                                stroke="" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="style_patch_1 st">
+                        <div class="patch1 shadow">
+                            <div class="note">
+                                <h2 class="norm">
+                                    Features
+                                    <svg viewBox="0 0 24 24" class="icon" fill="#000" xmlns="http://www.w3.org/2000/svg"
+                                        stroke="orangered">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="1.5"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M13.7309 3.51014L15.4909 7.03014C15.7309 7.52014 16.3709 7.99014 16.9109 8.08014L20.1009 8.61014C22.1409 8.95014 22.6209 10.4301 21.1509 11.8901L18.6709 14.3701C18.2509 14.7901 18.0209 15.6001 18.1509 16.1801L18.8609 19.2501C19.4209 21.6801 18.1309 22.6201 15.9809 21.3501L12.9909 19.5801C12.4509 19.2601 11.5609 19.2601 11.0109 19.5801L8.02089 21.3501C5.88089 22.6201 4.58089 21.6701 5.14089 19.2501L5.85089 16.1801C5.98089 15.6001 5.75089 14.7901 5.33089 14.3701L2.85089 11.8901C1.39089 10.4301 1.86089 8.95014 3.90089 8.61014L7.09089 8.08014C7.62089 7.99014 8.26089 7.52014 8.50089 7.03014L10.2609 3.51014C11.2209 1.60014 12.7809 1.60014 13.7309 3.51014Z"
+                                                stroke="" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </h2>
+                                <div class="text">
+                                    <ul class="info">
+                                        <li>&bullet;Easy to Collect big data.</li>
+                                        <li>&bullet;Easy to Use.</li>
+                                        <li>&bullet;Easy to <b class="special_underline">Download</b>.</li>
+                                    </ul>
+                                </div>
+                                <div class="task_frame">
+                                    <div class="task_logo">
+                                        <svg viewBox="0 0 24 24" class="svg_taskbar" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" stroke="orangered">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="1.5"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path
+                                                    d="M13.7309 3.51014L15.4909 7.03014C15.7309 7.52014 16.3709 7.99014 16.9109 8.08014L20.1009 8.61014C22.1409 8.95014 22.6209 10.4301 21.1509 11.8901L18.6709 14.3701C18.2509 14.7901 18.0209 15.6001 18.1509 16.1801L18.8609 19.2501C19.4209 21.6801 18.1309 22.6201 15.9809 21.3501L12.9909 19.5801C12.4509 19.2601 11.5609 19.2601 11.0109 19.5801L8.02089 21.3501C5.88089 22.6201 4.58089 21.6701 5.14089 19.2501L5.85089 16.1801C5.98089 15.6001 5.75089 14.7901 5.33089 14.3701L2.85089 11.8901C1.39089 10.4301 1.86089 8.95014 3.90089 8.61014L7.09089 8.08014C7.62089 7.99014 8.26089 7.52014 8.50089 7.03014L10.2609 3.51014C11.2209 1.60014 12.7809 1.60014 13.7309 3.51014Z"
+                                                    stroke="" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+    </section>
+
+    <main>
+        <div class="main">
+            <h1 class="norm middle">
+                Introduction
+                <hr class="ligthsaber">
+            </h1>
+            <p class="info" style="padding-top: 10px;">
+                <b class="blockquote_words">
+                    <blockquote>I am Developer of this Project <br> I am telling you something.</blockquote>
+                </b>
+            </p>
+            <br>
+            <p class="info" style="font-family: cursive;">
+            <h2 class="header">Hey</h2> <br> Everyone, I am Full Stack Deep Learning Engineer.
+            <br> Lorem ipsum dolor
+            sit amet consectetur adipisicing elit.  Illum impedit quo, sit explicabo dolorum molestias  labore
+            at aliquam? Inventore facilis perspiciatis hic  doloribus quis dolorum quas officia aspernatur ipsum
+            veritatis?  Lorem ipsum dolor sit amet consectetur adipisicing elit.  Illum quod maiores numquam et
+            quae cumque molestias  officiis, veritatis necessitatibus officia mollitia minus voluptatum,  veniam
+            id nesciunt dicta libero. Consequatur, quaerat!
+            </p>
+        </div>
+        <div class="master-card cr1">Welcome all of you, <br> Who visit this website
+            <span class="author">Aman Raj</span>
+        </div>
+        <div class="master-card cr2 right_side">Lorem ipsum dolor sit amet, <br> consectetur
+            adipisicing elit. Distinctio tenetur fugiat magni aspernatur repudiandae iste? Nam exercitationem
+            praesentium dolores, at tempora, officiis, enim eligendi et repellat rem alias corrupti? In.
+            <span class="author">Aman Raj</span>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer_header">
+                <h1>Raj</h1>
+                <p>Copyright &copy; 2023</p>
+            </div>
+            <nav>
+                <ol>
+                    <li class="home_li_1"><a class="footer_links" href="{{ home }}" style="text-decoration: none;">Home</a></li>
+                    <li class="home_li_2"><a class="footer_links" href="{{ collector }}" style="text-decoration: none;">Collecter</a>
+                    </li>
+                    <li class="home_li_3"><a class="footer_links" href="{{ data }}" style="text-decoration: none;">Form</a></li>
+                    <li class="home_li_4"><a class="footer_links" href="{{ about }}" style="text-decoration: none;">About</a></li>
+                </ol>
+            </nav>
+            <div class="social">
+                <h3>Contact With</h3>
+                <div class="imgs_social">
+                    <a href="{{ github }}" class="social_links">
+                        <img src="../static/assets/github.png" alt="" class="images_footer github">
+                    </a>
+                    <a href="{{ twitter }}" class="social_links">
+                        <img src="../static/assets/twitter.png" alt="" class="images_footer twitter">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="{{ url_for('static', filename='logic/hamburger.js' ) }}"></script>
+<script src="{{ url_for('static', filename='logic/messages.js' ) }}"></script>
+</html>

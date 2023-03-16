@@ -1,0 +1,135 @@
+/**
+ * @author Aman Raj
+ * @since 15/02/2023
+ * @encoding utf-8
+*/
+
+.code{
+    position: relative;
+    top: 30px;
+    height: 370px;
+    width: 434px;
+    z-index: 100;
+    left: 50px;
+    opacity: 1;
+}
+
+.loader{
+    /* border-top: 10px solid #fff; */
+    padding-top: 10px;
+    /* line-height: 5; */
+    font-size: large;
+    font-weight: 300;
+    color: var(--normal-color);
+    justify-content: space-between;
+}
+
+.import{
+    color: orangered;
+    font: bold;
+}
+
+.module{
+    cursor: pointer;
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.aligner{
+    justify-content: left;
+}
+
+.call{
+    color: var(--call-color);
+}
+
+.normal{
+    color: var(--normal-color);
+    /* font-size: 14px; */
+}
+
+.comment{
+    color: gray;
+}
+
+.brackets{
+    color: rgb(255, 166, 0);
+}
+
+.str{
+    color: greenyellow;
+}
+
+.param{
+    color: orange;
+}
+.param_{
+    color: rgb(149, 32, 179);
+}
+.bool{
+    color: var(--link-color);
+}
+.all{
+    color: orangered;
+}
+
+.dtypes{
+    color: rgb(207, 155, 22);
+}
+
+.ico{
+    height: 40px;
+    background-color: #fff;
+    width: 40px;
+    top: 5px;
+    left: 10px;
+    border-radius: 30px;
+    position: relative;
+    border: 2px solid #fff;
+    transition: 1s ease-in-out;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #fff,
+    0 0 55px #fff,
+    0 0 75px #fff;
+}
+
+.ico:hover{
+    scale: 2;
+    background-color: #fff;
+    border: 2px solid #fff;
+
+}
+
+.code_header{
+    background-color: rgb(0, 0, 0);
+    /* opacity: 0.5; */
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.name{
+    position: relative;
+    top: 10px;
+    left: 150px;
+    text-transform: lowercase;
+    color: grey;
+}
+
+.less{
+    border-left: 5px solid orangered;
+    background-color: rgba(255, 69, 0, 0.5);
+    color: #fff;
+    width: 40%;
+    word-wrap: break-word;
+    align-items: center;
+    text-align: center;
+    top: 5rem;
+    position: relative;
+}
