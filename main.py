@@ -18,7 +18,6 @@ from flask import flash, get_flashed_messages
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
 from sqlite3 import connect
-import numpy as np
 import pandas as pd
 import warnings
 import json
