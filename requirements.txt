@@ -4,7 +4,6 @@ Flask-SQLAlchemy
 greenlet
 itsdangerous
 Jinja2
-joblib
 MarkupSafe
 mypy-extensions
 numpy
@@ -31,7 +30,6 @@ greenlet
 gunicorn
 itsdangerous
 Jinja2
-joblib
 MarkupSafe
 mypy-extensions
 numpy
@@ -50,3 +48,4 @@ threadpoolctl
 tomli
 typing_extensions
 Werkzeug
+joblib

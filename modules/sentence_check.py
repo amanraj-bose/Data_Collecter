@@ -5,8 +5,8 @@
 """
 
 import sys
-import joblib
 import os
+import joblib
 sys.path.append('./preprocessor.py')
 from .preprocessor import PreProcessor
 from .basic import path
@@ -79,6 +79,7 @@ class SentenceCheck(object):
     def _loader(self, path:str):
         return joblib.load(path)
 
+
     def _decode(self, x, decoder):
 
         for i, j in decoder.items():
@@ -119,7 +120,7 @@ class SentenceCheck(object):
 
         spam_ = self._model(x=text, model=spam['model'], decoder=None, transformer=spam['transformer'], decoding=False)
 
-        __lang__ = joblib.load(os.path.join(MODEL, "language_detector.pkl"))
+        __lang__ = self._loader(os.path.join(MODEL, "language_detector.pkl"))
         __lang__ = __lang__.predict([self._cleaner(text)])
         __lang__ = str(__lang__[0]).lower()
 

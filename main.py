@@ -55,7 +55,7 @@ log = []
 
 # Log Cleaner
 
-log_path = os.path.join(path(os.path.abspath(os.path.dirname(__file__))), 'app', 'log')
+log_path = os.path.join(path(os.path.abspath(os.path.dirname(__file__))), 'Data_Collecter', 'log')
 # log_clear(path=log_path) # , 'system.log'
 
 ###########################################################
