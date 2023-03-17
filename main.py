@@ -11,6 +11,7 @@ from modules import path
 from modules import encode, decode
 from reader import Links
 from flask import Response, send_file
+from flask import redirect, url_for
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -87,13 +88,13 @@ def home():
                            kaggle=json_files.KAGGLE,
                            Hugging_Face=json_files.HUGGING_FACE,
                            twitter=json_files.TWITTER,
-                           collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c",
+                           collector="/collector",
                            home="/",
                            module_name=json_files.MODULE_NAME,
                            data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 
 
-@app.route('/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c', methods=['GET', 'POST'])
+@app.route('/collector', methods=['GET', 'POST'])
 def collector():
     logger = Log(os.path.join(log_path, "system.log"))
     submited = ""
@@ -125,29 +126,33 @@ def collector():
                 log.append(
                     f"[Error] [{request.remote_addr}] [{time.asctime()}] Error Text Type\n")
                 logger.log(log)
+            return render_template(r'collector.html',
+                               twitter=json_files.TWITTER,
+                               github=json_files.GITHUB,
+                               home="/", collector="/collector",
+                               agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
         else:
             flash("It is a Result Panel More info Click `Form` navlink.")
             log.append(
                 f"[Error] [{request.remote_addr}] [{time.asctime()}] First Layer Stop the Input\n")
             logger.log(log)
 
+            redirect(url_for('collector'))
+
         log.append(
-            f"[Info] [{request.remote_addr}] [{time.asctime()}] User Visited on your Website '\collector' \n")
+            f"[Info] [{request.remote_addr}] [{time.asctime()}] User Visited on your Website '/collector' \n")
         logger.close()
-        return render_template(r'collector.html',
-                               twitter=json_files.TWITTER,
-                               github=json_files.GITHUB,
-                               home="/", collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c",
-                               agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
-    else:
+
+
+    elif request.method == "GET":
         log.append(
             f"[Info] [{request.remote_addr}] [{time.asctime()}] User Visited on your Website '\colledctor' \n")
-        return render_template(r'collector.html', twitter=json_files.TWITTER, github=json_files.GITHUB, home="/", collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c", agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
+        return render_template(r'collector.html', twitter=json_files.TWITTER, github=json_files.GITHUB, home="/", collector="/collector", agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 
 
 @app.route("/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4")
 def data():
-    return render_template(r'form.html', data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c",
+    return render_template(r'form.html', data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/collector",
                            twitter=json_files.TWITTER, github=json_files.GITHUB, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 
 
@@ -191,11 +196,11 @@ def data_download():
 
 @app.route("/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 def about():
-    return render_template(r'about.html', about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1", data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c", twitter=json_files.TWITTER, github=json_files.GITHUB, author="Aman Raj",
+    return render_template(r'about.html', about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1", data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/collector", twitter=json_files.TWITTER, github=json_files.GITHUB, author="Aman Raj",
     github_author_1="", twitter_author_1="")
 
-#if __name__ == '__main__':
-    #app.app_context().push()
-    #db.drop_all()
-    #db.create_all()
-    #app.run(host="0.0.0.0", port=4000)
+# if __name__ == '__main__':
+#     app.app_context().push()
+#     db.drop_all()
+#     db.create_all()
+#     app.run(host="0.0.0.0", port=4000)
