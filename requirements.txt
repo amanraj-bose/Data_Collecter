@@ -14,7 +14,6 @@ platformdirs
 pycodestyle
 python-dateutil
 pytz
-scikit-learn
 scipy
 six
 SQLAlchemy
@@ -49,3 +48,4 @@ tomli
 typing_extensions
 Werkzeug
 joblib
+scikit-learn
