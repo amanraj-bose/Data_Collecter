@@ -16,5 +16,4 @@ if [ ! -f $VIRTUALENV/bin/pip ]; then
 fi
 
 $VIRTUALENV/bin/pip install -r requirements.txt
-$VIRTUALENV/bin/pip install joblib
 $VIRTUALENV/bin/python3 main.py
