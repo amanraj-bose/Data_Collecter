@@ -126,23 +126,18 @@ def collector():
                 log.append(
                     f"[Error] [{request.remote_addr}] [{time.asctime()}] Error Text Type\n")
                 logger.log(log)
-            return render_template(r'collector.html',
-                               twitter=json_files.TWITTER,
-                               github=json_files.GITHUB,
-                               home="/", collector="/collector",
-                               agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
+            return redirect(url_for('collector'))
         else:
             flash("It is a Result Panel More info Click `Form` navlink.")
             log.append(
                 f"[Error] [{request.remote_addr}] [{time.asctime()}] First Layer Stop the Input\n")
             logger.log(log)
 
-            redirect(url_for('collector'))
-
         log.append(
             f"[Info] [{request.remote_addr}] [{time.asctime()}] User Visited on your Website '/collector' \n")
         logger.close()
 
+        return redirect(url_for('collector'))
 
     elif request.method == "GET":
         log.append(
