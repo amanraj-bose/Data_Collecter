@@ -198,4 +198,4 @@ if __name__ == '__main__':
     app.app_context().push()
     db.drop_all()
     db.create_all()
-    app.run(debug=False, host="0.0.0.0", port=4000)
+    app.run(host="0.0.0.0", port=4000)
