@@ -5,4 +5,4 @@ if __name__ == '__main__':
     application.app_context().push()
     db.drop_all()
     db.create_all()
-    application.run()
+    application.run(debug=True)
