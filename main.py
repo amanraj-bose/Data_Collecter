@@ -196,8 +196,8 @@ def about():
     return render_template(r'about.html', about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1", data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/collector", twitter=json_files.TWITTER, github=json_files.GITHUB, author="Aman Raj",
     github_author_1="", twitter_author_1="")
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # app.app_context().push()
     # db.drop_all()
     # db.create_all()
-    app.run(host="0.0.0.0", port=4000)
+    # app.run(host="0.0.0.0", port=4000)
