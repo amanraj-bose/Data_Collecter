@@ -179,7 +179,7 @@ form{
     }
     form{
         display: grid;
-        top: 2rem;
+        top: 0rem;
         position: relative;
     }
     .submit{
