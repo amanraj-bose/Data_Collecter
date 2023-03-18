@@ -88,13 +88,13 @@ def home():
                            kaggle=json_files.KAGGLE,
                            Hugging_Face=json_files.HUGGING_FACE,
                            twitter=json_files.TWITTER,
-                           collector="/collector",
+                           collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c",
                            home="/",
                            module_name=json_files.MODULE_NAME,
                            data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 
 
-@app.route('/collector', methods=['GET', 'POST'])
+@app.route('/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c', methods=['GET', 'POST'])
 def collector():
     #logger = Log(os.path.join(log_path, "system.log"))
     submited = ""
@@ -135,21 +135,21 @@ def collector():
             #logger.log(log)
 
         #log.append(
-            #f"[Info] [{request.remote_addr}] [{time.asctime()}] User Visited on your Website '/collector' \n")
+            #f"[Info] [{request.remote_addr}] [{time.asctime()}] User Visited on your Website '/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c' \n")
         #logger.close()
 
-        return render_template(r'collector.html', twitter=json_files.TWITTER, github=json_files.GITHUB, home="/", collector="/collector", agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
+        return render_template(r'collector.html', twitter=json_files.TWITTER, github=json_files.GITHUB, home="/", collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c", agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 
 
     elif request.method == "GET":
         # log.append(
           #  f"[Info] [{request.remote_addr}] [{time.asctime()}] User Visited on your Website '\colledctor' \n")
-        return render_template(r'collector.html', twitter=json_files.TWITTER, github=json_files.GITHUB, home="/", collector="/collector", agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
+        return render_template(r'collector.html', twitter=json_files.TWITTER, github=json_files.GITHUB, home="/", collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c", agenda=str(json_files.AGENDA_CONTENT + ".").capitalize(), Identity=submited, data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", time_cool_down=json_files.COOL_DOWN_TIME, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 
 
 @app.route("/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4")
 def data():
-    return render_template(r'form.html', data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/collector",
+    return render_template(r'form.html', data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c",
                            twitter=json_files.TWITTER, github=json_files.GITHUB, about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 
 
@@ -162,7 +162,7 @@ def data_download():
         except Exception:
             pass
 
-        to_csv_file = os.path.join(path(os.path.abspath(os.path.dirname(__file__))), "Data_Collecter", "database.csv")
+        to_csv_file = os.path.join(basedir, "database.csv")
 
         with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "meta", "login.secret.json"), "r") as f:
             login = json.load(f)['login']
@@ -193,11 +193,11 @@ def data_download():
 
 @app.route("/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1")
 def about():
-    return render_template(r'about.html', about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1", data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/collector", twitter=json_files.TWITTER, github=json_files.GITHUB, author="Aman Raj",
+    return render_template(r'about.html', about="/a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1", data="/07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4", home="/", collector="/0736fd5b7cc7ab7dfe821d3a17f93f2634497770232486155c9c881321c4d22c", twitter=json_files.TWITTER, github=json_files.GITHUB, author="Aman Raj",
     github_author_1="", twitter_author_1="")
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # app.app_context().push()
     # db.drop_all()
     # db.create_all()
-    app.run(host="0.0.0.0", port=4000)
+    # app.run(host="0.0.0.0", port=4000)
