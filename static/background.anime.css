@@ -179,7 +179,8 @@ form{
     }
     form{
         display: grid;
-        top: 5px;
+        top: 2rem;
+        position: relative;
     }
     .submit{
         margin: auto;
