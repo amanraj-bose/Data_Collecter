@@ -162,7 +162,7 @@ def data_download():
         except Exception:
             pass
 
-        to_csv_file = os.path.join(path(os.path.abspath(os.path.dirname(__file__))), "Data_Collecter", "data", "database.csv")
+        to_csv_file = os.path.join(path(os.path.abspath(os.path.dirname(__file__))), "Data_Collecter", "database.csv")
 
         with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "meta", "login.secret.json"), "r") as f:
             login = json.load(f)['login']
