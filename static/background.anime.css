@@ -175,7 +175,7 @@ form{
     }
     .input_label{
         display: grid;
-        top: 5px;
+        top: 5rem;
     }
     form{
         display: grid;
@@ -213,6 +213,7 @@ form{
     .submission{
         margin: auto;
         width: 20rem;
+        top: 2rem;
     }
 }
 
